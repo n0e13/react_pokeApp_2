@@ -1,7 +1,12 @@
 import React from "react";
+import CustomForm from '../../components/CustomForm';
 
 const AddNew = () => {
-  return <div>AddNew</div>;
+  return (
+    <div>
+      <CustomForm />
+    </div>
+  );
 };
 
 export default AddNew;
