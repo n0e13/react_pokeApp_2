@@ -1,7 +1,12 @@
 import React from "react";
+import PokemonDetail from '../../components/PokemonDetail';
 
 const Details = () => {
-  return <div>Details</div>;
+  return (
+    <div>
+      <PokemonDetail />
+    </div>
+  );
 };
 
 export default Details;
