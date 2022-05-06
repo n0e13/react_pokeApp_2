@@ -1,0 +1,82 @@
+[
+    {
+        "name": "zubat",
+        "id":"41"
+    },
+    {
+        "name": "golbat",
+        "id":"42"
+    },
+    {
+        "name": "oddish",
+        "id":"43"
+    },
+    {
+        "name": "gloom",
+        "id":"44"
+    },
+    {
+        "name": "vileplume",
+        "id":"45"
+    },
+    {
+        "name": "paras",
+        "id":"46"
+    },
+    {
+        "name": "parasect",
+        "id":"47"
+    },
+    {
+        "name": "venonat",
+        "id":"48"
+    },
+    {
+        "name": "venomoth",
+        "id":"49"
+    },
+    {
+        "name": "diglett",
+        "id":"50"
+    },
+    {
+        "name": "dugtrio",
+        "id":"51"
+    },
+    {
+        "name": "meowth",
+        "id":"52"
+    },
+    {
+        "name": "persian",
+        "id":"53"
+    },
+    {
+        "name": "psyduck",
+        "id":"54"
+    },
+    {
+        "name": "golduck",
+        "id":"55"
+    },
+    {
+        "name": "mankey",
+        "id":"56"
+    },
+    {
+        "name": "primeape",
+        "id":"57"
+    },
+    {
+        "name": "growlithe",
+        "id":"58"
+    },
+    {
+        "name": "arcanine",
+        "id":"59"
+    },
+    {
+        "name": "poliwag",
+        "id":"60"
+    }
+]
