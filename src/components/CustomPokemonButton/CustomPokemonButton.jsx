@@ -12,7 +12,6 @@ const CustomPokemonButton = (props) => {
   const { result } = useFetch(urlPokemon);
   const navigate = useNavigate();
 
-
   const handleClick = () => {
     setDetailPokemon(true);
     setUrlPokemon(props.data.url);
@@ -26,6 +25,7 @@ const CustomPokemonButton = (props) => {
     const typeOne = result.types[0].type.name;
     const typeTwo = result.types.length === 2 ? result.types[1].type.name : '';
 
+    //navigate(`/pokemon/${result.id}?name=${name}`);
     navigate(`/pokemon/${result.id}?name=${name}&img=${img}&typeOne=${typeOne}&typeTwo=${typeTwo}`);
   }
 
@@ -34,11 +34,11 @@ const CustomPokemonButton = (props) => {
       saveParams();
     }
   });
- 
-  return <div>{detailPokemon ? <Watch ariaLabel="loading-indicator" /> : <button onClick={handleClick}>{name}</button>
-}</div>;
 
-/*   return <button onClick={handleClick}>{name}</button>; */
+  return <div>{detailPokemon ? <Watch ariaLabel="loading-indicator" /> : <button onClick={handleClick}>{name}</button>
+  }</div>;
+
+  /*   return <button onClick={handleClick}>{name}</button>; */
 };
 
 export default CustomPokemonButton;
