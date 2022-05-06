@@ -11,7 +11,7 @@ const PokemonDetail = () => {
 
   return (
     
-  <div> <CustomCloseButton/><p>Nombre: {name} <img src={img} /> Tipos: {typeOne} {typeTwo !== '' ? `y ${typeTwo}` : ''}</p></div>
+  <div> <CustomCloseButton/><p>Nombre: {name} <img src={img} alt={name}/> Tipos: {typeOne} {typeTwo !== '' ? `y ${typeTwo}` : ''}</p></div>
   );
 };
 
