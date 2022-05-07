@@ -12,11 +12,20 @@ function App() {
 
   const [pokeList, setPokeList] = useState([]);
 
-  const savePokeList = (newPokeList) => setPokeList([...newPokeList, ...pokeList]);
+  const savePokeList = (newPokemon) => {
+    if (pokeList.length === 0) {
+      console.log('listado vacío');
+      setPokeList([...newPokemon]);
+    }
+    else {
+      console.log('listado con cosas');
+      setPokeList([newPokemon, ...pokeList]);
+    }
+  }
 
-/*   if (pokeList.length === 0) {
-    savePokeList(pokemonJson);
-  } */
+  /*   if (pokeList.length === 0) {
+      savePokeList(pokemonJson);
+    } */
 
   const pokeData = {
     pokeList,
