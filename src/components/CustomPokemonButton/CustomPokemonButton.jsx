@@ -14,19 +14,35 @@ const CustomPokemonButton = (props) => {
 
   const handleClick = () => {
     setDetailPokemon(true);
-    setUrlPokemon(props.data.url);
+
+    props.data.url ? setUrlPokemon(props.data.url) : saveParams();
+
   }
 
   const saveParams = () => {
     setDetailPokemon(false);
+    let id = '';
+    let name = '';
+    let img = '';
+    let typeOne = '';
+    let typeTwo = '';
 
-    const name = result.name.charAt(0).toUpperCase() + result.name.slice(1);
-    const img = result.sprites.front_default;
-    const typeOne = result.types[0].type.name;
-    const typeTwo = result.types.length === 2 ? result.types[1].type.name : '';
+    if (urlPokemon !== '') { // API
+      id = result.id;
+      name = result.name.charAt(0).toUpperCase() + result.name.slice(1);
+      img = result.sprites.front_default;
+      typeOne = result.types[0].type.name;
+      typeTwo = result.types.length === 2 ? result.types[1].type.name : '';
+    } else { // Creados
+      id = props.data.id;
+      name = props.data.name;
+      img = props.data.img;
+      typeOne = props.data.typeOne;
+      typeTwo = props.data.typeTwo;
+    }
 
     //navigate(`/pokemon/${result.id}?name=${name}`);
-    navigate(`/pokemon/${result.id}?name=${name}&img=${img}&typeOne=${typeOne}&typeTwo=${typeTwo}`);
+    navigate(`/pokemon/${id}?name=${name}&img=${img}&typeOne=${typeOne}&typeTwo=${typeTwo}`);
   }
 
   useEffect(() => {
