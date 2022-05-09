@@ -1,7 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Watch } from 'react-loader-spinner';
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { styled } from '@mui/material/styles';
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
+import LoadingButton from '@mui/lab/LoadingButton';
+import Button from '@mui/material/Button';
+import { red } from '@mui/material/colors';
+
+const PokemonButton = styled(LoadingButton)(({ theme }) => ({
+  color: theme.palette.getContrastText(red[500]),
+  backgroundColor: red[500],
+  width: 150,
+  height: 75,
+  margin: 10,
+  '&:hover': {
+    backgroundColor: red[700],
+  },
+}));
 
 const CustomPokemonButton = (props) => {
 
@@ -16,7 +31,6 @@ const CustomPokemonButton = (props) => {
     setDetailPokemon(true);
 
     props.data.url ? setUrlPokemon(props.data.url) : saveParams();
-
   }
 
   const saveParams = () => {
@@ -51,10 +65,12 @@ const CustomPokemonButton = (props) => {
     }
   });
 
-  return <div>{detailPokemon ? <Watch ariaLabel="loading-indicator" /> : <button onClick={handleClick}>{name}</button>
-  }</div>;
+  return (
+    <div>
+      {<PokemonButton onClick={handleClick} loading={detailPokemon}><CatchingPokemonIcon/><pre>  </pre>{name}</PokemonButton>}
+    </div>
+  );
 
-  /*   return <button onClick={handleClick}>{name}</button>; */
 };
 
 export default CustomPokemonButton;
