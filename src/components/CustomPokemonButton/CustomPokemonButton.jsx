@@ -4,14 +4,13 @@ import useFetch from "../../hooks/useFetch";
 import { styled } from '@mui/material/styles';
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
 import LoadingButton from '@mui/lab/LoadingButton';
-import Button from '@mui/material/Button';
 import { red } from '@mui/material/colors';
 
 const PokemonButton = styled(LoadingButton)(({ theme }) => ({
   color: theme.palette.getContrastText(red[500]),
   backgroundColor: red[500],
   width: 150,
-  height: 75,
+  height: 35,
   margin: 10,
   '&:hover': {
     backgroundColor: red[700],
@@ -67,7 +66,7 @@ const CustomPokemonButton = (props) => {
 
   return (
     <div>
-      {<PokemonButton onClick={handleClick} loading={detailPokemon}><CatchingPokemonIcon/><pre>  </pre>{name}</PokemonButton>}
+      {<PokemonButton onClick={handleClick} loading={detailPokemon}><CatchingPokemonIcon/><pre> </pre>{name}</PokemonButton>}
     </div>
   );
 
