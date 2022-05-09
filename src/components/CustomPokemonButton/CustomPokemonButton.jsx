@@ -7,7 +7,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import Button from '@mui/material/Button';
 import { red } from '@mui/material/colors';
 
-const PokemonButton = styled(Button)(({ theme }) => ({
+const PokemonButton = styled(LoadingButton)(({ theme }) => ({
   color: theme.palette.getContrastText(red[500]),
   backgroundColor: red[500],
   width: 150,
@@ -67,7 +67,7 @@ const CustomPokemonButton = (props) => {
 
   return (
     <div>
-      {detailPokemon ?  <LoadingButton loading variant="outlined"/> : <PokemonButton onClick={handleClick}><CatchingPokemonIcon/><pre>  </pre>{name}</PokemonButton>}
+      {<PokemonButton onClick={handleClick} loading={detailPokemon}><CatchingPokemonIcon/><pre>  </pre>{name}</PokemonButton>}
     </div>
   );
 
