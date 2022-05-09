@@ -7,7 +7,6 @@ const useFetch = (url) => {
     // Crearemos dos estados: loading(true) y result([]), que devolveremos en un objeto
     const [loading, setLoading] = useState(true)
     const [result, setResult] = useState([])
-
     // Añadiremos un useEffect que se ejecutará cuando la url cambie y hará un fetch a dicha url
     useEffect(() => {
         async function fetchData() {

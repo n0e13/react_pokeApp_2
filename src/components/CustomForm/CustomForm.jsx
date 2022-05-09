@@ -35,9 +35,7 @@ const CustomForm = () => {
       typeOne: typeOnePokemon,
       typeTwo: (typeTwoPokemon !== '') ? typeTwoPokemon : ''
     };
-    console.log(newPokemon);
     savePokeList(newPokemon);
-
   }
 
   const handleChange = (e) => {

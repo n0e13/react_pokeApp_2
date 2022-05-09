@@ -14,11 +14,9 @@ function App() {
 
   const savePokeList = (newPokemon) => {
     if (pokeList.length === 0) {
-      console.log('listado vacío');
       setPokeList([...newPokemon]);
     }
     else {
-      console.log('listado con cosas');
       setPokeList([newPokemon, ...pokeList]);
     }
   }
