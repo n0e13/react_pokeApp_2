@@ -55,7 +55,7 @@ const PokemonSearchList = () => {
     <div>
       <CustomSearch onChange={handleChange} />
       {
-        isSearching
+        isSearching && value !== ''
           ? <Watch ariaLabel="loading-indicator" />
           : notFound
             ? <p>Not found {value}</p>
